@@ -403,6 +403,21 @@ main {
   margin: 0 0 0.6rem;
 }
 
+/* Banner at the top of Home: one picture on a black band */
+
+.banner {
+  background: #000;
+  border-bottom: 1px solid var(--line);
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  max-width: 87.5rem;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* Hero */
 
 .hero {
