@@ -323,9 +323,20 @@ main {
   padding: 2.5rem 0 3rem;
 }
 
+/* Phones and tablets: name and title first, then the photo, then the welcome
+   text and the links. From 60rem: text on the left, photo on the right. */
 .hero .wrap {
-  display: grid;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  display: contents;
+}
+
+.hero-welcome,
+.hero .profile-links {
+  order: 2;
 }
 
 .hero-title {
@@ -355,8 +366,12 @@ main {
 }
 
 .hero-portrait {
-  order: -1;
+  order: 1;
   width: 9.5rem;
+}
+
+.hero .hero-portrait {
+  margin-bottom: 1.5rem;
 }
 
 .honor-figure {
@@ -774,9 +789,10 @@ h2 .badge-ongoing {
 
 .highlight-body .highlight-foot {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 0.25rem 0.75rem;
   margin: auto 0 0;
   font-family: var(--sans);
   font-size: 0.9rem;
@@ -784,6 +800,10 @@ h2 .badge-ongoing {
 
 .highlight-foot time {
   font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.highlight-link {
   white-space: nowrap;
 }
 
@@ -1262,9 +1282,14 @@ h3.sub {
   }
 
   .hero .wrap {
+    display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     gap: 3.5rem;
     align-items: center;
+  }
+
+  .hero-text {
+    display: block;
   }
 
   .hero-portrait {
@@ -1272,6 +1297,10 @@ h3.sub {
     width: 100%;
     max-width: 23rem;
     justify-self: end;
+  }
+
+  .hero .hero-portrait {
+    margin-bottom: 0;
   }
 
   .theme {

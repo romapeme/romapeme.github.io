@@ -45,7 +45,7 @@ window.ACTIVITIES = [
   },
   {
     date: "2023-03",
-    title: "Visiting Dr. Wu at Harvard University",
+    title: "Visit to Harvard School of Dental Medicine",
     place: "",
     text: "I visited my friend and former colleague Dr. Xinchen Wu at his lab and toured the Harvard School of Dental Medicine. It was good to see the research there and to spend the day with Xinchen, a brilliant and ever-funny colleague. The day reminded me how much it matters to stay connected with good people and good friends.",
     photos: [
