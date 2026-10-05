@@ -165,12 +165,13 @@ ul {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.25rem 1.5rem;
+  gap: 0.25rem 0.75rem;
   padding-top: 1.1rem;
   padding-bottom: 0.9rem;
 }
 
 .brand {
+  margin-right: auto;
   font-family: var(--serif);
   font-weight: 600;
   font-size: 1.2rem;
@@ -208,6 +209,91 @@ ul {
 .site-header nav {
   order: 3;
   flex-basis: 100%;
+}
+
+/* Menu button, phones only. theme.js puts "has-js" on <html>; without the
+   script the button never shows and the links stay visible as before. */
+.nav-toggle {
+  display: none;
+  order: 2;
+  align-self: center;
+  align-items: center;
+  gap: 0.4rem;
+  height: 1.9rem;
+  padding: 0 0.7rem 0 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  border-color: var(--muted);
+}
+
+.nav-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.nav-toggle .icon-close,
+.nav-toggle[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+@media (max-width: 45.99rem) {
+  .has-js .nav-toggle {
+    display: inline-flex;
+  }
+
+  .has-js .theme-toggle {
+    order: 1;
+  }
+
+  .has-js .site-header nav {
+    display: none;
+  }
+
+  .has-js .site-header.nav-open nav {
+    display: block;
+    padding-top: 0.6rem;
+  }
+
+  .has-js .site-header nav ul {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .has-js .site-header nav a {
+    display: block;
+    padding: 0.7rem 0.1rem;
+    font-size: 1.02rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .has-js .site-header nav li:last-child a {
+    border-bottom-color: transparent;
+  }
+
+  .has-js .site-header nav a[aria-current="page"] {
+    border-bottom-color: var(--line);
+    font-weight: 600;
+    box-shadow: inset 3px 0 0 var(--accent);
+    padding-left: 0.75rem;
+  }
 }
 
 /* Mode switch: a small sliding switch. Knob on the left with a sun in light
@@ -1376,6 +1462,7 @@ h3.sub {
 @media print {
   .site-header nav,
   .theme-toggle,
+  .nav-toggle,
   .skip,
   .profile-links {
     display: none;

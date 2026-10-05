@@ -1,4 +1,4 @@
-/* Light and dark mode, and the fade-in of sections.
+/* Light and dark mode, the fade-in of sections, and the menu button on phones.
    The site follows the device setting until the visitor picks a mode with the
    switch in the header. The choice is kept in this browser only.
    This file is loaded in the <head>, so everything here is set before the page
@@ -8,6 +8,7 @@
 
   var KEY = "theme";
   var root = document.documentElement;
+  root.classList.add("has-js");
   var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
   function stored() {
@@ -74,8 +75,29 @@
     });
   }
 
+  /* Phones: the "Menu" button opens and closes the list of pages. */
+  function menu() {
+    var header = document.querySelector(".site-header");
+    var button = document.querySelector("[data-nav-toggle]");
+    if (!header || !button) return;
+    function set(open) {
+      header.classList.toggle("nav-open", open);
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    button.addEventListener("click", function () {
+      set(!header.classList.contains("nav-open"));
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && header.classList.contains("nav-open")) {
+        set(false);
+        button.focus();
+      }
+    });
+  }
+
   function init() {
     reveal();
+    menu();
     var current = root.getAttribute("data-theme");
     document.querySelectorAll("[data-theme-toggle]").forEach(function (button) {
       label(button, current);
