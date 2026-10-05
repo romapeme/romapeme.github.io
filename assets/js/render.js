@@ -57,6 +57,7 @@
       var a = el("a", "pub-doi", "doi.org/" + p.doi);
       a.href = "https://doi.org/" + p.doi;
       a.rel = "noopener";
+      a.target = "_blank";
       meta.appendChild(a);
     }
     li.appendChild(meta);
@@ -106,6 +107,7 @@
       var a = el("a", "news-source", sourceLabel(n.link));
       a.href = n.link;
       a.rel = "noopener";
+      a.target = "_blank";
       a.setAttribute("aria-label", sourceLabel(n.link) + ": " + n.text);
       p.appendChild(a);
     }
@@ -144,6 +146,7 @@
         if (photo.wide) a.className = "wide";
         else if (photo.height > photo.width) a.className = "portrait";
         a.href = photo.src;
+        a.target = "_blank";
         var img = el("img");
         img.src = photo.src;
         img.alt = photo.alt || "";
