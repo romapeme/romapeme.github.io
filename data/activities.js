@@ -36,7 +36,7 @@ window.ACTIVITIES = [
     date: "2024-08",
     title: "Symposium on Human Pluripotent Stem Cell-Derived Hematopoiesis and a visit to Northwestern University",
     place: "Chicago, IL",
-    text: "I attended the 2024 Symposium on Human Pluripotent Stem Cell-Derived Hematopoiesis during a visit to Northwestern University Feinberg School of Medicine. The trip also let me visit my friend Dr. İnci Aydemir, MD, in her laboratory. İnci has been a supportive and inspiring friend for many years, and seeing her work firsthand was memorable and motivating.",
+    text: "I attended the 2024 Symposium on Human Pluripotent Stem Cell-Derived Hematopoiesis during a visit to Northwestern University Feinberg School of Medicine. The trip also let me visit my friend Dr. İnci Aydemir, MD, in her laboratory. İnci has supported and inspired me for many years, and it was a pleasure to see her work firsthand.",
     photos: [
       { src: "assets/img/activities/hematopoiesis-symposium-2024-sign.jpg", alt: "Mert Gezek and a friend standing on either side of a sign that reads 2024 iPSC-derived Hematopoiesis Symposium.", width: 1280, height: 962 },
       { src: "assets/img/activities/northwestern-2024-lab-visit.jpg", alt: "Selfie of Mert Gezek and a friend in a laboratory corridor.", width: 1280, height: 962 },
@@ -47,7 +47,7 @@ window.ACTIVITIES = [
     date: "2023-03",
     title: "Visit to Harvard School of Dental Medicine",
     place: "",
-    text: "I visited my friend and former colleague Dr. Xinchen Wu at his lab and toured the Harvard School of Dental Medicine. It was good to see the research there and to spend the day with Xinchen, a brilliant and ever-funny colleague. The day reminded me how much it matters to stay connected with good people and good friends.",
+    text: "I visited my friend and former colleague Dr. Xinchen Wu at his lab and toured the Harvard School of Dental Medicine. It was good to see the research there and to catch up with Xinchen, whose work and good humor I have always valued. Visits like this remind me how much it matters to stay in touch with colleagues and friends.",
     photos: [
       { src: "assets/img/activities/harvard-visit.jpg", alt: "Selfie of Mert Gezek and a friend in front of a stone building with tall columns.", width: 1280, height: 1711 }
     ]

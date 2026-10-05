@@ -10,7 +10,7 @@ window.NEWS = [
   {
     date: "2026-03",
     text: "Finalist in the UMass Lowell Three Minute Thesis (3MT) competition.",
-    link: "https://www.uml.edu/graduateschool/3mt/"
+    link: ""
   },
   {
     date: "2025-10",
