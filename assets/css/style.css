@@ -405,19 +405,6 @@ main {
 
 /* Banner at the top of Home: one picture on a black band */
 
-.banner {
-  background: #000;
-  border-bottom: 1px solid var(--line);
-}
-
-.banner img {
-  display: block;
-  width: 100%;
-  max-width: 87.5rem;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* Hero */
 
 .hero {
@@ -1296,14 +1283,26 @@ h3.sub {
   stroke-linejoin: round;
 }
 
+/* The band behind the page titles: Mert's own micrographs, darkened so that
+   the white title stays readable. Same in the light and the dark mode. */
 .page-head {
-  padding: 2.5rem 0 0.5rem;
+  padding: 3.5rem 0 3.25rem;
+  background:
+    linear-gradient(rgba(6, 10, 20, 0.58), rgba(6, 10, 20, 0.7)),
+    #05070d url("../img/research-banner.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.page-head h1 {
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
 }
 
 .page-head p {
   margin: 0.9rem 0 0;
   max-width: 44rem;
-  color: var(--muted);
+  color: #e6eaf2;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .head-actions {
@@ -1486,6 +1485,17 @@ h3.sub {
   body {
     background: #fff;
     color: #000;
+  }
+
+  .page-head {
+    padding: 1.5rem 0 0.5rem;
+    background: none;
+  }
+
+  .page-head h1,
+  .page-head p {
+    color: #000;
+    text-shadow: none;
   }
 
   .reveal-on main > .section > .wrap {
